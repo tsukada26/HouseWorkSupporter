@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <link th:href="@{/css/calc.css}" rel="stylesheet" type="text/css" />
+	<title>mission_5</title>
+</head>
+<body>
+    <div class="calculator">
+        <p id="id" class="display">0</p>
+        <p id="error_msg"></p>
+        <div class="buttons">
+            <button onclick="operator_calc('AC')">AC</button>
+            <button onclick="operator_calc('+/-')">+/-</button>
+            <button onclick="operator_calc('%')">%</button>
+            <button onclick="operator_calc('/')">/</button>
+            <br>
+            <button onclick="num_calc(7)">7</button>
+            <button onclick="num_calc(8)">8</button>
+            <button onclick="num_calc(9)">9</button>
+            <button onclick="operator_calc('*')">*</button>
+            <br>
+            <button onclick="num_calc(4)">4</button>
+            <button onclick="num_calc(5)">5</button>
+            <button onclick="num_calc(6)">6</button>
+            <button onclick="operator_calc('-')">-</button>
+            <br>
+            <button onclick="num_calc(1)">1</button>
+            <button onclick="num_calc(2)">2</button>
+            <button onclick="num_calc(3)">3</button>
+            <button onclick="operator_calc('+')">+</button>
+            <br>
+            <button onclick="num_calc(0)">0</button>
+            <button onclick="num_calc('00')">00</button>
+            <button onclick="operator_calc('.')">.</button>
+            <button onclick="operator_calc('=')">=</button>
+            
+        </div>
+    </div>
+    <script th:src="@{/js/calc.js}"></script>
+</body>
+</html>

@@ -1,10 +1,32 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Hello</title>
-    </head>
-    <body>
-        <h1>a</h1>
-    </body>
+<!DOCTYPE html>
+<html lang='ja'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          locale:'ja',
+          //土日の色付け
+          businessHours:true,
+          //カレンダー内の日付クリックで日表示に遷移するか
+          navLinks:false,
+          dateClick: (e)=>{// 日付マスのクリックイベント
+      		console.log("dateClick:", e);
+      		},
+      	  eventClick: (e)=>{// イベントのクリックイベント
+      		console.log("eventClick:", e.event.title);
+      	  }
+         });
+        calendar.render();
+      });
+
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
 </html>

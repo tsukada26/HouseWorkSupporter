@@ -2,6 +2,22 @@ var mid_operator = "";
 var is_before_input = "";
 var tmp = "";
 var error_msg = "";
+var memory_num = 0;
+function memory_calc(input_memory_key){
+	//計算結果の数値を格納する
+	result_num = parseFloat(document.getElementById("id").innerText);
+	if(input_memory_key == "M+"){
+		memory_num += result_num;
+	}else if(input_memory_key == "M-"){
+		memory_num -= result_num;
+	}else if(input_memory_key == "MC"){
+		memory_num = 0;
+	}else{
+		//MRが入力された場合
+		result_write(memory_num);
+	}
+	is_before_input = input_memory_key;
+}
 function operator_calc(input_operater){
     //演算子を2回連続でクリックされた時はエラーを表示
     if(is_before_input == "+" || is_before_input == "-" || is_before_input == "/" || is_before_input == "*"){

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-button {
+ input{
     /* ボタンのサイズ */
     width: 70px;
     height: 70px;
@@ -14,7 +14,7 @@ button {
     outline: none;
   }
 /* クリック時に色を濃くする */
-button:active {
+input:active {
    background:  #5a5a5a;
  }
  .operator:active {
@@ -35,7 +35,7 @@ button:active {
     border-left: solid #b6b6b6 6px;
     border-radius: 5px;
   }
- button:hover {
+input:hover {
     background: #747373b9;
   }
 #error_msg{
